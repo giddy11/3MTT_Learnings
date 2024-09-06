@@ -1,0 +1,23 @@
+h2 {
+    color:  #38761D;
+    font-size: larger;
+}
+
+h3 {
+    font-size: medium;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-light-green {
+    color:  #38761D;
+}
+
+img {
+    border: 2px solid;
+    padding: 45px;
+    height: 200px;
+    width: 200px;
+}
