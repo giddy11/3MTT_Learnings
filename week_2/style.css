@@ -1,0 +1,112 @@
+  nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: right; */
+  }
+
+  nav li {
+    margin-right: 20px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo {
+    align-content: center;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  } */
+
+  .hero {
+    /* background-image: url("../week_1/dev_fellow.jpg"); */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../week_1/dev_fellow.jpg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    background-size: cover;
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .features {
+    padding: 30px;
+  }
+
+  .features-list {
+    display: flex;
+    /* margin-right: 30px; */
+  }
+
+  footer {
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0 10px 0;
+    color: white;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+  }
+
+  .fs-2 {
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  /* .bg-lightgray {
+    background-color: lightgray;
+  }
+  
+  .border-red {
+    border: 2px solid red;
+  }
+  
+  .border-green {
+    border: 1px solid green;
+  }
+  
+  .border-black {
+    border: 1px solid black;
+  }
+  
+  .border-magenta {
+    border: 1px solid darkmagenta;
+  }
+  
+  .border-blue {
+    border: 1px solid blue;
+  }
+  
+  .border-yellow {
+    border: 3px solid yellow;
+  } */

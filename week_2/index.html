@@ -4,68 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../week_1/dev_fellow.jpg" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-  <style>
-    .navBar {
-      justify-content: space-between;
-      display: flex;
-      height: 50px;
-      align-items: center;
-      background-color: antiquewhite;
-    }
-
-    .right_links {
-      justify-content: space-between;
-      display: flex;
-    }
-
-    .space_xr {
-      margin-right: 15px;
-    }
-
-    .space_xl {
-      margin-right: 15px;
-    }
-
-    body {
-      margin: 0px;
-      padding: 0;
-      height: 100%;
-    }
-
-    .hero {
-      background-image: url("../week_1/dev_fellow.jpg");
-      height: 500px;
-      width: 100%;
-      /* background-size: contain; */
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-top: 30px;
-      /* position: relative; */
-      display: flex;
-      background-size: cover;
-      /* color: white; */
-      /* text-align: center; */
-      /* display: flex; */
-      /* align-items: center; */
-      /* justify-content: center; */
-    }
-  </style>
   <body>
     <!-- navBar -->
-    <div class="navBar">
-      <div>Logo</div>
-      <div class="right_links">
-        <div class="space_xr">Home</div>
-        <div class="space_xr">Home</div>
-        <div class="space_xr">Home</div>
-        <div class="space_xr">Home</div>
-        <div class="space_xr">Home</div>
-      </div>
-    </div>
+    <section>
+      <header>
+        <nav>
+          <div class="logo"><a href="">Logo</a></div>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
 
-    <div class="hero">12</div>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Welcome to 3MTT Week 2 class</h1>
+          <p>We are dedicated to serve you better.</p>
+          <button>Learn More</button>
+        </div>
+      </section>
+
+      <section class="features border-green">
+        <div class="fs-2">Our Features</div>
+        <div class="features-list border-red">
+          <div class="border-yellow">
+            <h1>Security</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div>
+            <h1>Speed</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div>
+            <h1>Customization</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+      <p>&copy; 2024 copyright</p>
+    </footer>
   </body>
 </html>
