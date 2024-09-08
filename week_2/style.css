@@ -42,10 +42,10 @@
   .hero {
     /* background-image: url("../week_1/dev_fellow.jpg"); */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../week_1/dev_fellow.jpg');
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: center; */
     display: flex;
     background-size: cover;
     color: white;
@@ -60,7 +60,8 @@
 
   .features-list {
     display: flex;
-    /* margin-right: 30px; */
+    /* margin-right: 0; */
+    gap: 25px;
   }
 
   footer {
@@ -83,11 +84,11 @@
     font-weight: bold;
   }
 
-  /* .bg-lightgray {
+  .bg-lightgray {
     background-color: lightgray;
   }
   
-  .border-red {
+  /* .border-red {
     border: 2px solid red;
   }
   
