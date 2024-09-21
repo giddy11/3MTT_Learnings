@@ -81,6 +81,10 @@
     color: #2c97ea;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 .btn-content {
     display: flex;
     align-items: center;
