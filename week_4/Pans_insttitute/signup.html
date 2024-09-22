@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+      /* .green {
+        border: 1px solid green;
+      }
+
+      .blue {
+        border: 1px solid blue;
+      }
+
+      .red {
+        border: 1px solid red;
+      } */
+
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .signup {
+        column-gap: 75px;
+      }
+
+      .signup h1 {
+        font-size: 35px;
+        padding-bottom: 25px;
+      }
+
+      .signup label {
+        font-size: 21px;
+        padding-bottom: 5px;
+      }
+
+      .signup div {
+        padding-bottom: 30px;
+      }
+
+      .signup button {
+        padding: 15px 20px 15px 20px;
+        border-radius: 15px;
+        width: 100%;
+        font-size: 20px;
+        background-color: #c3c3c3;
+        cursor: pointer;
+        color: white;
+        border: none;
+      }
+
+      input {
+        height: 35px;
+        font-size: 15px;
+        padding-left: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="red">
+        <div class="signup green" style="width: 20%; height: 70vh;">
+            <h1>Create an account</h1>
+            <div class="flex flex-col">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="number">Phone Number</label>
+                <input id="number" type="number" placeholder="Enter your number">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter your password">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" type="password" placeholder="confirm your password">
+            </div>
+
+            <div class="red">
+                <button>Create an account</button>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
