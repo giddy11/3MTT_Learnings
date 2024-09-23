@@ -111,8 +111,20 @@
     justify-content: space-around;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .flex {
     display: flex;
+}
+
+.pt-1 {
+    padding-top: 10px;
+}
+
+.pt-2 {
+    padding-top: 5px;
 }
 
 .routes {
@@ -140,6 +152,23 @@
     font-weight: bold;
     
 }
+
+.institute-section {
+    padding-top: 50px;
+}
+
+.success-section {
+    padding-top: 60px;
+}
+
+.grid-container {
+    display: grid;
+    /* column-gap: 50px; */
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+    /* padding: 10px; */
+  }
+
 
 @media only screen and (max-width: 1200px) {
     body {
@@ -215,7 +244,7 @@
 
 /* colors */
 
-/* .green {
+.green {
     border: 1px solid green;
 }
 
@@ -225,4 +254,4 @@
 
 .red {
     border: 1px solid red;
-} */
+}
