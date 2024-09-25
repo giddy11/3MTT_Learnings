@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+
+
+.container {
+    background-color: #589167;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.left-contacts {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.right-media-icons {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: white;
+}
+
+.phone {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.email {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* .media-icon {
+    margin-right: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.black {
+    border: 1px solid black;
+}
+
+.blue {
+    border: 1px solid blue;
+}
