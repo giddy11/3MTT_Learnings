@@ -161,14 +161,81 @@
     padding-top: 60px;
 }
 
+.success-section .grid-container .grid-item {
+    padding-right: 30px;
+}
+
+.success-section .grid-container h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.success-section .grid-container .right-grid-item {
+    padding-right: 30px;
+}
+
+.success-section .grid-container .grid-item p {
+    width: 100%;
+    padding-bottom: 50px;
+    font-size: 1.3rem;
+}
+
+.success-section .grid-container .right-grid-item .employment-rate-green {
+    width: 80%;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: green;
+    font-size: 20px;
+}
+
+.success-section .grid-container .right-grid-item .employment-rate-red {
+    width: 80%;
+    color: white;
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: red;
+    font-size: 20px;
+}
+
+.success-section .grid-container .right-grid-item .employment-rate-blue {
+    width: 80%;
+    color: white;
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: blue;
+    font-size: 20px;
+}
+
+.success-section .grid-container .right-grid-item .employment-rate-purple {
+    width: 80%;
+    color: white;
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: purple;
+    font-size: 20px;
+}
+
 .grid-container {
     display: grid;
     /* column-gap: 50px; */
-    grid-template-columns: auto auto;
-    background-color: #2196F3;
+    grid-template-columns: 40% 40%;
+    padding-left: 200px;
+    /* background-color: #2196F3; */
     /* padding: 10px; */
   }
 
+.footer .container {
+    background-color: #234A66;
+}
 
 @media only screen and (max-width: 1200px) {
     body {
