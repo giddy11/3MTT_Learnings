@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F8FC;
+}
+
+.header {
+    width: 100%;
+}
+
+.header .container {
+    display: flex;
+    width: 98%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.header .container .logo {
+    line-height: 14px;
+}
+
+.header .container .logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.header .container .nav-bars {
+    display: flex;
+    gap: 25px;
+}
+
+.header .container .nav-bars .nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.header .container .nav-bars .btn-signin a {
+    text-decoration: none;
+    background-color: #C4E9FD;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.pos-terminal .container {
+    padding-top: 30px;
+    width: 98%;
+    height: 60vh;
+    margin: auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.pos-terminal .container .left {
+    width: 50%;
+    height: fit-content;
+
+}
+
+.pos-terminal .container .left .contents {
+    width: 40%;
+    padding-left: 40px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin: auto; */
+}
+
+.pos-terminal .container .left .pos {
+    width: fit-content;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #B4DDFA;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.pos-terminal .container .left .action {
+    margin-top: 20px;
+
+}
+
+.pos-terminal .container .left .action a.open-account {
+    /* border: 1px solid red; */
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.pos-terminal .container .left .action a.learn-more {
+    /* border: 1px solid red; */
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.pos-terminal .container .right {
+    width: 50%;
+    height: 100%;
+}
+
+.pos-terminal .container .right img {
+    width: 100%;
+    /* height: 100%; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+.red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.black {
+    border: 1px solid black;
+}
+
+.blue {
+    border: 1px solid blue;
+} */
