@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#login-section {
+#signup-section {
     margin: 0;
     background-color: #ECEFEF;
     width: 100%;
@@ -11,7 +11,7 @@
     display: flex;
 }
 
-#login-section .container {
+#signup-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,109 +20,114 @@
     background-color: #FFFFFF;
 }
 
-#login-section .container .form-data {
+#signup-section .container .form-data {
     width: 80%;
     margin: auto;
 }
 
-#login-section .container .img-div img {
+#signup-section .container .img-div img {
     width: 150px;
     padding: 20px 0px 20px 0px;
 }
 
-#login-section .container .email {
+#signup-section .container .church-name {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
 
-#login-section .container .password {
+#signup-section .container .fname-lname {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#signup-section .container .fname {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+#signup-section .container .lname {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+#signup-section .container .email {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
 
-#login-section .container #login-form .forgot-password {
+#signup-section .container .password {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #b4b4ac;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 
-#login-section .container #login-form .forgot-password .remember {
+#signup-section .container #register-form .remember {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 30px;
 }
 
-#login-section .container #login-form .forgot-password .remember label {
-    font-weight: normal;
-}
-
-#login-section .container #login-form .forgot-password a {
+#signup-section .container #register-form .remember span {
     color: #139DAA;
-    font-weight: 600;
-    text-decoration: none;
 }
 
-#login-section .container #login-form button {
+#signup-section .container #register-form button {
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    padding: 15px 0px 15px 0px;
     background-color: #139DAA;
     border: none;
     color: white;
     border-radius: 5px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     cursor: pointer;
 }
 
-#login-section .container #login-form button:hover {
+#signup-section .container #register-form button:hover {
     background-color: #0e7e89;
 }
 
-#login-section .container p {
+#signup-section .container p {
     text-align: center;
     color: #b4b4ac;
     font-weight: 500px;
     /* margin-bottom: 30px; */
 }
 
-#login-section .container .routes {
+#signup-section .container .routes {
     width: 100%;
-    border: 1px solid #139DAA;
     text-align: center;
-    padding: 10px 0px 10px 0px;
+    color: #b4b4ac;
+    /* padding: 10px 0px 10px 0px; */
     border-radius: 5px;
-    margin: 30px 0px 30px 0px;
-    cursor: pointer;
+    margin: 5px 0px 30px 0px;
 }
 
-#login-section .container .routes:hover {
-    background-color: #139DAA;
-    color: white;
-
+#signup-section .container .routes a:hover {
+    text-decoration: underline;
     a {
         color: white;
     }
 }
 
-#login-section .container .routes a {
+#signup-section .container .routes a {
     color: #139DAA;
     text-decoration: none;
     font-weight: 500;
 }
 
-hr {
-    margin: 30px 0px 30px 0px;
-}
-
-#login-section .container #login-form label {
+#signup-section .container #register-form label {
     font-weight: bold;
     padding-bottom: 0.2rem;
 }
 
-#login-section .container #login-form input {
+#signup-section .container #register-form input {
     height: 2rem;
     background-color: transparent;
     padding: 0px 5px 0px 5px;
