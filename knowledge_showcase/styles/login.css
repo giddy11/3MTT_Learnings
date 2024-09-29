@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#login-section {
+    margin: 0;
+    background-color: #ECEFEF;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#login-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+
+#login-section .container .form-data {
+    width: 80%;
+    margin: auto;
+}
+
+#login-section .container .img-div img {
+    width: 150px;
+    padding: 20px 0px 20px 0px;
+}
+
+#login-section .container .email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#login-section .container .password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#login-section .container #login-form .forgot-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b4b4ac;
+    margin-bottom: 30px;
+}
+
+#login-section .container #login-form .forgot-password .remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#login-section .container #login-form .forgot-password .remember label {
+    font-weight: normal;
+}
+
+#login-section .container #login-form .forgot-password a {
+    color: #139DAA;
+    font-weight: 600;
+}
+
+#login-section .container #login-form button {
+    width: 100%;
+}
+
+#login-section .container #login-form label {
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+}
+
+#login-section .container #login-form input {
+    height: 2rem;
+    background-color: transparent;
+    padding: 0px 5px 0px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.black {
+    border: 1px solid black;
+}
+
+.blue {
+    border: 1px solid blue;
+}
+
+.yellow {
+    border: 1px solid yellow;
+}
