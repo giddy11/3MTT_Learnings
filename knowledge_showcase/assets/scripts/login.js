@@ -1,5 +1,5 @@
 window.onload = function() {
-    const loginForm = document.getElementById('register-form');
+    const loginForm = document.getElementById('login-form');
     
     loginForm.addEventListener('submit', function(event) {
       // Prevent the default form submission
