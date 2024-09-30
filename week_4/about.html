@@ -18,7 +18,10 @@
     <!-- register -->
     <section class="top-right flex justify-content-end">
       <div class="register">
-        <button>Register</button>
+        <!-- <button>Register</button> -->
+        <a href="#register-form" style="text-decoration: none; color: white"
+          >Register</a
+        >
         <button>admin login</button>
         <button>contact</button>
       </div>
@@ -176,18 +179,28 @@
           </p>
         </div>
         <div class="red">
-          <img style="width: 100%;" src="https://pan-african.com/wp-content/uploads/2019/01/asdf-1.jpg" alt="">
+          <img
+            style="width: 100%"
+            src="https://pan-african.com/wp-content/uploads/2019/01/asdf-1.jpg"
+            alt=""
+          />
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-     <section class="footer">
+    <section class="footer">
       <div class="container">
         <div class="contact-us">
           <h3>CONTACT US</h3>
-          <p>Rivers (Port Harcourt): Roxy Plaza, 192, East West Road, Rumuodara Junction, PhC. Rivers. 08169148276,</p>
-          <p>Lagos, Nigeria: 30A Opebi Street, Ikeja Lagos 08032576135, 08183628138</p>
+          <p>
+            Rivers (Port Harcourt): Roxy Plaza, 192, East West Road, Rumuodara
+            Junction, PhC. Rivers. 08169148276,
+          </p>
+          <p>
+            Lagos, Nigeria: 30A Opebi Street, Ikeja Lagos 08032576135,
+            08183628138
+          </p>
         </div>
         <div class="follow-us">
           <h3>LIKE AND FOLLOW US</h3>
@@ -203,11 +216,86 @@
             </div>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column; justify-content: center;" class="red">
-          <hr style="color: red; height: 1px; width: 100%;">
-          <p>© 2018 pan-african.com. All rights reserved Designed by Liberty Digital Solutions</p>
+        <div
+          style="display: flex; flex-direction: column; justify-content: center"
+          class="red"
+        >
+          <hr style="color: red; height: 1px; width: 100%" />
+          <p>
+            © 2018 pan-african.com. All rights reserved Designed by Liberty
+            Digital Solutions
+          </p>
         </div>
       </div>
-     </section>
+    </section>
+
+    <section id="register-form" class="register-form" style="margin-top: 50px">
+      <div class="signup green" style="width: 20%; height: 70vh">
+        <h1>Create an account</h1>
+        <form id="signupForm">
+          <div class="flex flex-col">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="number">Phone Number</label>
+            <input
+              id="number"
+              type="tel"
+              placeholder="Enter your number"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
+          <div class="red">
+            <button type="submit">Create an account</button>
+          </div>
+
+          <!-- Message container -->
+          <div
+            id="messageContainer"
+            style="margin-top: 10px; color: #2c97ea"
+          ></div>
+        </form>
+      </div>
+    </section>
+
+    <script src="about.js"></script>
   </body>
 </html>

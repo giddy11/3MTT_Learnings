@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The United Church - A Management Software</title>
+    <link rel="stylesheet" href="../styles/signup.css" />
+  </head>
+  <body>
+    <section id="signup-section">
+      <div class="container red">
+        <div class="img-div red" style="text-align: center">
+          <img
+            src="https://seeklogo.com/images/U/united-church-lae-papua-new-guinea-logo-86A4C32283-seeklogo.com.png"
+            alt=""
+          />
+        </div>
+        <div class="form-data green">
+          <form id="register-form">
+            <div class="church-name green">
+              <label for="church-name">Church Name</label>
+              <input
+                type="text"
+                id="church-name"
+                placeholder="Enter Church Name"
+                required
+              />
+            </div>
+
+            <select
+              name=""
+              id=""
+              style="
+                width: 100%;
+                padding: 10px 0px 10px 0px;
+                margin-bottom: 30px;
+              "
+            >
+              <option value="">
+                What is the approximate size of your church?
+              </option>
+              <option value="">1-50 People</option>
+              <option value="">51-100 People</option>
+              <option value="">101-250 People</option>
+              <option value="">251-500 People</option>
+              <option value="">501-1000 People</option>
+              <option value="">Over 1000 People</option>
+            </select>
+
+            <div class="fname-lname">
+              <div class="fname">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  placeholder="Enter First Name"
+                  required
+                />
+              </div>
+
+              <div class="lname">
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  placeholder="Enter Last Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="email green">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+
+            <div class="password">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+
+            <div class="remember">
+              <input class="red" type="checkbox" id="terms" name="" />
+              <label for="terms" class="red"
+                >I agree to the <span>Terms of Services</span> and i confirm i
+                have read the <span>Privacy Policy.</span></label
+              >
+            </div>
+
+            <button type="submit" class="signup">Sign up</button>
+          </form>
+
+          <div class="routes">
+            <span>Already Signed Up?</span>
+            <span>
+              <a href="login.html" class="">Login Here</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../assets/scripts/login.js"></script>
+  </body>
+</html>

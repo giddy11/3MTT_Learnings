@@ -1,9 +1,11 @@
 * {
     margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
-.container {
+/* This section is for header top */
+.header-top .container {
     background-color: #589167;
     display: flex;
     justify-content: space-around;
@@ -22,7 +24,7 @@
     gap: 20px;
 }
 
-a {
+.header-top a {
     color: white;
 }
 
@@ -36,6 +38,40 @@ a {
     display: flex;
     gap: 10px;
     cursor: pointer;
+}
+
+/* This section is for Header down */
+/* The below is a descendant class selector */
+.header-down .container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header-down .nav-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.header-down a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.header-down .logo {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.active a {
+    color: #589167;
+}
+
+/* Hover state */
+.nav-icons a:hover {
+    color: #589167;
 }
 
 /* .media-icon {
