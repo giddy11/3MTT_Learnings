@@ -9,10 +9,22 @@
     background-color: #139DAA;
     color: white;
     padding: 15px 0px 15px 0px;
+    position: static;
 }
 
 .dashboard-md {
     display: none;
+}
+
+.bottom-nav-md {
+    display: none;
+}
+
+.bottom-nav-md .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .logo {
@@ -123,19 +135,6 @@
 }
 
 @media (max-width: 768px) {
-    /* .header .logo {
-        width: 50px;
-        padding-left: 5px;
-        padding-right: 5px;
-    } */
-
-    /* .header .logo a .logo-short {
-        display: inline;
-    }
-    
-    .header .logo a .logo-full {
-        display: none;
-    } */
 
     .header {
         display: none;
@@ -149,6 +148,16 @@
         font-weight: 600;
         color: white;
         padding: 20px 0px 20px 0px;
+    }
+
+    .bottom-nav-md {
+        background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        border: 1px solid rgb(222, 222, 222);
+        position: relative;
+        top: 595px;
     }
 }
 
