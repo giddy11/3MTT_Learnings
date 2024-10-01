@@ -11,8 +11,14 @@
     padding: 15px 0px 15px 0px;
 }
 
+.dashboard-md {
+    display: none;
+}
+
 .header .logo {
     width: 350px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
     display: flex;
     justify-content: center;
     font-weight: 600;
@@ -23,6 +29,14 @@
 .header .logo a {
     color: white;
     text-decoration: none;
+}
+
+.header .logo a .logo-short {
+    display: none;
+}
+
+.header .logo a .logo-full {
+    display: block;
 }
 
 .header .container {
@@ -44,7 +58,99 @@
     border: none;
 }
 
+.header .container .right {
+    display: flex;
+    gap: 20px;
+}
 
+.header .container .right .search {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 250px;
+    gap: 10px;
+    padding: 10px 0px 10px 20px;
+    background-color: #4eb6c0;
+    border-radius: 20px;
+}
+
+.header .container .right .search input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* Placeholder color */
+.header .container .right .search input::placeholder {
+    color: white;
+    opacity: 1; /* Ensures full color visibility */
+}
+
+/* Remove border on focus */
+.header .container .right .search input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: none;
+}
+
+.header .container .right .profile {
+    /* border: 1px solid red; */
+}
+
+.header .container .right .profile select {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1270px) {
+    .header .logo {
+        width: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .header .logo a .logo-short {
+        display: inline;
+    }
+    
+    .header .logo a .logo-full {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .header .logo {
+        width: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+    } */
+
+    /* .header .logo a .logo-short {
+        display: inline;
+    }
+    
+    .header .logo a .logo-full {
+        display: none;
+    } */
+
+    .header {
+        display: none;
+    }
+
+    .dashboard-md {
+        background-color: #139DAA;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+        padding: 20px 0px 20px 0px;
+    }
+}
 
 
 

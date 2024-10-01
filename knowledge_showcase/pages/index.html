@@ -9,23 +9,34 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="dashboard-md">Dashboard</div>
     <section class="header red">
         <div class="logo yellow">
-            <a href="index.html">The United Church</a>
+            <a href="index.html"><span class="logo-short">TUC</span><span class="logo-full">The United Church</span></span></a>
         </div>
         <div class="container green">
             <div class="dashboard">
-                <button>
+                <button id="dashboard-btn">
                     <i class="fa fa-align-justify" style="font-size:20px;"></i>
                     <p>Dashboard</p>
                 </button>
                 
             </div>
             <div class="right">
-                <div class="search">search</div>
-                <div class="profile">profile</div>
+                <div class="search">
+                    <i class="fa fa-search" style="font-size:20px"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <div class="profile">
+                    <select name="" id="">
+                        <option value="">Admin View</option>
+                        <option value="">Member View</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
+
+    <script src="../assets/scripts/index.js"></script>
 </body>
 </html>
