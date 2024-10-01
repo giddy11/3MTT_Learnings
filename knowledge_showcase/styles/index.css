@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #139DAA;
+    color: white;
+    padding: 15px 0px 15px 0px;
+}
+
+.header .logo {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+    width: 100%;
+}
+
+.header .container .dashboard button {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.black {
+    border: 1px solid black;
+}
+
+.blue {
+    border: 1px solid blue;
+}
+
+.yellow {
+    border: 1px solid yellow;
+} */
