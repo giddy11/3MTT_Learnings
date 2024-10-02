@@ -104,10 +104,6 @@
     border: none;
 }
 
-.header .container .right .profile {
-    /* border: 1px solid red; */
-}
-
 .header .container .right .profile select {
     background-color: transparent;
     color: white;
@@ -115,6 +111,60 @@
     border-radius: 20px;
     border: 1px solid white;
     cursor: pointer;
+}
+
+main .container {
+    display: flex;
+}
+
+main .container aside {
+    width: 340px;
+    height: 90vh;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* font-weight: 600; */
+    /* font-size: 25px; */
+    box-shadow: rgb(240, 232, 232) 0px 0px 0px 0px;
+}
+
+main .container aside .nav-icons {
+    width: 100%;
+    /* color: black; */
+}
+
+main .container aside .nav-icons .dashboard a {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0px 10px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+main .container aside .nav-icons .dashboard a .notification {
+    display: flex;
+    gap: 10px;
+}
+
+.active {
+    background-color: #139DAA;
+    color: white;
+}
+
+.active:hover {
+    background-color: #0f8792;
+}
+
+main .container aside .nav-icons p {
+    font-size: 20px;
+}
+
+main .container .body {
+    background-color: #ecefef;
+    height: 90vh;
+    width: 100%;
 }
 
 
@@ -132,9 +182,17 @@
     .header .logo a .logo-full {
         display: none;
     }
+
+    main .container aside {
+        width: 50px;
+    }
+
+    main .container .nav-icons .dashboard .details {
+        display: none;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 846px) {
 
     .header {
         display: none;
@@ -156,8 +214,8 @@
         justify-content: space-evenly;
         width: 100%;
         border: 1px solid rgb(222, 222, 222);
-        position: relative;
-        top: 595px;
+        position: absolute;
+        top: 94vh;
     }
 }
 
@@ -169,9 +227,8 @@
 
 
 
-
-
-/* .red {
+/* 
+.red {
     border: 1px solid red;
 }
 
