@@ -169,11 +169,16 @@ main .container aside .nav-icons p {
     font-size: 20px;
 }
 
+main .body {
+    overflow: scroll;
+}
+
 main .body .container {
     display: block;
     width: 97%;
     /* background-color: red; */
     margin: auto;
+    padding-bottom: 60px; /* Add some padding to prevent overlap with bottom navbar */
 }
 
 main .body .container .up-overview {
@@ -255,6 +260,8 @@ main .container .body {
 }
 
 
+
+
 @media (max-width: 1270px) {
     .header .logo {
         width: 50px;
@@ -275,6 +282,10 @@ main .container .body {
     }
 
     main .container .nav-icons .dashboard .details {
+        display: none;
+    }
+
+    main .container .nav-icons .dashboard-not .details {
         display: none;
     }
 
@@ -299,18 +310,30 @@ main .container .body {
         padding: 20px 0px 20px 0px;
     }
 
+    main .body .container .down {
+        display: block; /* Change flex to block for smaller screens */
+        width: 100%;
+    }
+
+    main .body .container .down .upcoming,
+    main .body .container .down .attendance {
+        width: 50%; /* Make each element take full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
     .bottom-nav-md {
         background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        border: 1px solid rgb(222, 222, 222);
-        position: absolute;
-        top: 94vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid rgb(222, 222, 222);
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0; /* Ensure it stays at the bottom of the viewport */
+    z-index: 10; /* Add a higher z-index to ensure it stays above other content */
     }
 
     main .body .container .up-overview {
-        justify-content: center;
+        justify-content: left;
     }
 }
 
