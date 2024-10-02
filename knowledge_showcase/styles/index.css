@@ -120,6 +120,7 @@ main .container {
 main .container aside {
     width: 340px;
     height: 90vh;
+    overflow: auto;
     /* padding-left: 5px;
     padding-right: 5px; */
     display: flex;
@@ -161,10 +162,34 @@ main .container aside .nav-icons p {
     font-size: 20px;
 }
 
+main .body .container {
+    display: block;
+    width: 97%;
+    background-color: red;
+    margin: auto;
+}
+
+main .body .container .down {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main .body .container .down .upcoming {
+    width: 49%;
+    background-color: green;
+}
+
+main .body .container .down .attendance {
+    width: 49%;
+    background-color: blue;
+}
+
 main .container .body {
     background-color: #ecefef;
     height: 90vh;
     width: 100%;
+    /* overflow: hidden; */
 }
 
 
