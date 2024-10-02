@@ -144,9 +144,16 @@ main .container aside .nav-icons .dashboard a {
     text-decoration: none;
 }
 
-main .container aside .nav-icons .dashboard a .notification {
+main .container aside .nav-icons .dashboard-not a {
     display: flex;
-    gap: 10px;
+    gap: 4px;
+    padding: 10px 0px 10px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+main .container aside .nav-icons .dashboard-not a .notification {
+    display: flex;
 }
 
 .active {
@@ -165,9 +172,64 @@ main .container aside .nav-icons p {
 main .body .container {
     display: block;
     width: 97%;
-    background-color: red;
+    /* background-color: red; */
     margin: auto;
 }
+
+main .body .container .up-overview {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 0px;
+}
+
+main .body .container .up-overview a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+main .body .container .up-overview a .two-details {
+    display: flex;
+    flex: 1 1 14rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    max-width: 15rem;
+    height: 10rem;
+    /* padding: 50px 0px; */
+    /* background-color: greenyellow; */
+    background-color: white;
+    /* cursor: pointer; */
+    box-shadow: rgb(240, 232, 232) 5px 0px 0px 0px;
+}
+
+main .body .container .up-overview a .two-details h1 {
+    color: #0f8792;
+}
+
+main .body .container .up-overview .two-details p {
+    color: rgb(129, 112, 112);
+    font-weight: 600;
+}
+
+main .body .container .up-overview a .two-details .topic {
+    padding-top: 10px;
+}
+
+main .body .container .up-overview a .two-details p span {
+    color: #0f8792;
+    font-size: 30px;
+
+}
+
+main .body .container .up-overview a .two-details .date {
+    padding-bottom: 30px;
+}
+
 
 main .body .container .down {
     display: flex;
@@ -215,6 +277,10 @@ main .container .body {
     main .container .nav-icons .dashboard .details {
         display: none;
     }
+
+    main .body .container .up-overview {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 846px) {
@@ -241,6 +307,10 @@ main .container .body {
         border: 1px solid rgb(222, 222, 222);
         position: absolute;
         top: 94vh;
+    }
+
+    main .body .container .up-overview {
+        justify-content: center;
     }
 }
 
