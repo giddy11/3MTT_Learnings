@@ -244,11 +244,67 @@ main .body .container .down {
 
 main .body .container .down .upcoming {
     width: 49%;
-    background-color: green;
+    /* background-color: green; */
+}
+
+main .body .container .down .upcoming .view-all {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    /* padding-right: 15px; */
+}
+
+main .body .container .down .upcoming .view-all h4 {
+    font-size: 1.2rem;
+}
+
+main .body .container .down .upcoming .view-all a {
+    color: #4eb6c0;
+    text-decoration: none;
+}
+
+main .body .container .down .upcoming .container-upcoming {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont {
+    background-color: white;
+    /* background-color: red; */
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .option {
+    display: flex;
+    justify-content: right;
+    padding-right: 25px;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    margin-bottom: 2px;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 a {
+    text-decoration: none;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 h3 {
+    color: #4eb6c0;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 .check-in a {
+    color:#4eb6c0 ;
+    text-decoration: none;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 main .body .container .down .attendance {
     width: 49%;
+    height: 20px;
     background-color: blue;
 }
 
@@ -345,7 +401,7 @@ main .container .body {
 
 
 
-/* 
+
 .red {
     border: 1px solid red;
 }
@@ -364,4 +420,4 @@ main .container .body {
 
 .yellow {
     border: 1px solid yellow;
-} */
+}
