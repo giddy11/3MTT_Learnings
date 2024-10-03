@@ -120,6 +120,7 @@ main .container {
 main .container aside {
     width: 340px;
     height: 90vh;
+    overflow: auto;
     /* padding-left: 5px;
     padding-right: 5px; */
     display: flex;
@@ -143,9 +144,16 @@ main .container aside .nav-icons .dashboard a {
     text-decoration: none;
 }
 
-main .container aside .nav-icons .dashboard a .notification {
+main .container aside .nav-icons .dashboard-not a {
     display: flex;
-    gap: 10px;
+    gap: 4px;
+    padding: 10px 0px 10px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+main .container aside .nav-icons .dashboard-not a .notification {
+    display: flex;
 }
 
 .active {
@@ -161,11 +169,153 @@ main .container aside .nav-icons p {
     font-size: 20px;
 }
 
+main .body {
+    overflow: scroll;
+}
+
+main .body .container {
+    display: block;
+    width: 97%;
+    /* background-color: red; */
+    margin: auto;
+    padding-bottom: 60px; /* Add some padding to prevent overlap with bottom navbar */
+}
+
+main .body .container .up-overview {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 0px;
+}
+
+main .body .container .up-overview a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+main .body .container .up-overview a .two-details {
+    display: flex;
+    flex: 1 1 16rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    max-width: 16rem;
+    height: 10rem;
+    /* padding: 50px 0px; */
+    /* background-color: greenyellow; */
+    background-color: white;
+    /* cursor: pointer; */
+    box-shadow: rgb(240, 232, 232) 5px 0px 0px 0px;
+}
+
+main .body .container .up-overview a .two-details h1 {
+    color: #0f8792;
+}
+
+main .body .container .up-overview .two-details p {
+    color: rgb(129, 112, 112);
+    font-weight: 600;
+}
+
+main .body .container .up-overview a .two-details .topic {
+    padding-top: 10px;
+}
+
+main .body .container .up-overview a .two-details p span {
+    color: #0f8792;
+    font-size: 30px;
+
+}
+
+main .body .container .up-overview a .two-details .date {
+    padding-bottom: 30px;
+}
+
+
+main .body .container .down {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main .body .container .down .upcoming {
+    width: 49%;
+    /* background-color: green; */
+}
+
+main .body .container .down .upcoming .view-all {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    /* padding-right: 15px; */
+}
+
+main .body .container .down .upcoming .view-all h4 {
+    font-size: 1.2rem;
+}
+
+main .body .container .down .upcoming .view-all a {
+    color: #4eb6c0;
+    text-decoration: none;
+}
+
+main .body .container .down .upcoming .container-upcoming {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont {
+    background-color: white;
+    /* background-color: red; */
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .option {
+    display: flex;
+    justify-content: right;
+    padding-right: 25px;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    margin-bottom: 2px;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 a {
+    text-decoration: none;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 h3 {
+    color: #4eb6c0;
+}
+
+main .body .container .down .upcoming .container-upcoming .cont .cont-2 .check-in a {
+    color:#4eb6c0 ;
+    text-decoration: none;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+main .body .container .down .attendance {
+    width: 49%;
+    height: 20px;
+    background-color: blue;
+}
+
 main .container .body {
     background-color: #ecefef;
     height: 90vh;
     width: 100%;
+    /* overflow: hidden; */
 }
+
+
 
 
 @media (max-width: 1270px) {
@@ -190,6 +340,14 @@ main .container .body {
     main .container .nav-icons .dashboard .details {
         display: none;
     }
+
+    main .container .nav-icons .dashboard-not .details {
+        display: none;
+    }
+
+    main .body .container .up-overview {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 846px) {
@@ -208,14 +366,30 @@ main .container .body {
         padding: 20px 0px 20px 0px;
     }
 
+    main .body .container .down {
+        display: block; /* Change flex to block for smaller screens */
+        width: 100%;
+    }
+
+    main .body .container .down .upcoming,
+    main .body .container .down .attendance {
+        width: 50%; /* Make each element take full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+
     .bottom-nav-md {
         background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        border: 1px solid rgb(222, 222, 222);
-        position: absolute;
-        top: 94vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid rgb(222, 222, 222);
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0; /* Ensure it stays at the bottom of the viewport */
+    z-index: 10; /* Add a higher z-index to ensure it stays above other content */
+    }
+
+    main .body .container .up-overview {
+        justify-content: left;
     }
 }
 
@@ -227,8 +401,8 @@ main .container .body {
 
 
 
-/* 
-.red {
+
+/* .red {
     border: 1px solid red;
 }
 
