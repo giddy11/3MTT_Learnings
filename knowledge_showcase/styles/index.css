@@ -197,13 +197,13 @@ main .body .container .up-overview a {
 
 main .body .container .up-overview a .two-details {
     display: flex;
-    flex: 1 1 14rem;
+    flex: 1 1 16rem;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 14rem;
-    max-width: 15rem;
+    width: 16rem;
+    max-width: 16rem;
     height: 10rem;
     /* padding: 50px 0px; */
     /* background-color: greenyellow; */
@@ -402,7 +402,7 @@ main .container .body {
 
 
 
-.red {
+/* .red {
     border: 1px solid red;
 }
 
@@ -420,4 +420,4 @@ main .container .body {
 
 .yellow {
     border: 1px solid yellow;
-}
+} */
