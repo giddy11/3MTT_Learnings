@@ -1,0 +1,128 @@
+main .container .body .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+main .container .body .container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+main .container .body .container .header .btn-follow-up {
+    padding: 10px 20px;
+    background-color: #1fb5c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .container .body .container .header .search-reports {
+    display: flex;
+    gap: 15px;
+}
+
+main .container .body .container .header .search-reports input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+main .container .body .container .header .btn-reports {
+    padding: 10px 20px;
+    background-color: #1fb5c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .container .body .container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+main .container .body .container table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #856404;
+}
+
+.status.done {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+}
+
+.btn-check {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-uncheck {
+    background-color: transparent;
+    color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-options {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-reports {
+        width: 100%;
+    }
+
+    .search-reports input {
+        width: calc(100% - 100px);
+    }
+}
