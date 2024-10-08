@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors and Styling</title>
+    <style>
+        /* Element selector */
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* Class selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* ID selector */
+        #main-title {
+            text-align: center;
+            font-size: 24px;
+            color: darkgreen;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            color: red;
+        }
+
+        /* Descendant selector */
+        div p {
+            font-style: italic;
+        }
+
+        /* Sibling selector */
+        h2 + p {
+            color: purple;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base styling */
+        .container {
+            width: 100%;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: lightgray;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive design */
+        @media only screen and (min-width: 600px) {
+            .content {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (min-width: 900px) {
+            .content {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Welcome to My Webpage</h1>
+    <div>
+        <p>This is a paragraph inside a div, and it's styled with a descendant selector.</p>
+    </div>
+    <h2>Subtitle</h2>
+    <p class="highlight">This paragraph comes right after the subtitle and uses the sibling selector.</p>
+    <a href="#">Hover over this link</a>
+
+    <div class="container">
+        <h1>Responsive Webpage</h1>
+        <div class="content">
+            <p>This content will adjust its width based on the screen size, using media queries for responsive design.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>Header</header>
+        <div class="content">
+            <p>Flexbox Content</p>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
