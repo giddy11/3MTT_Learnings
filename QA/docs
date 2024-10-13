@@ -1,0 +1,18 @@
+Selenium
+JUnit (Java Unit)
+
+How to check jdk (java development kit) 1.8 is installed or not
+
+Open cmd propmt and enter "java-version". If installed version number is displayed. 2. On windows, java i usually installed in the dirctory C:/Program Files/Java
+
+Using Testing Tools
+Ellipse
+Selenium Webdriver
+JUnit
+
+Before installing Eclipse, we need to check for or download Java (jdk).
+
+VERSIONS OF JDK (JAVA DEVELOPMENT KIT)
+Lower version before 1.8
+Current version after 1.8
+JDK 21 and above
