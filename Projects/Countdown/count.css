@@ -6,6 +6,11 @@
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .container .left-img {
@@ -16,6 +21,28 @@
 .container .right-text {
     width: 50%;
     height: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.container .right-text h1 {
+    padding-bottom: 5px;
+}
+
+.container .right-text i {
+    padding-bottom: 30px;
+}
+
+.container .right-text #lorem-text {
+    line-height: 25px;
+    padding-bottom: 50px;
 }
 
 .container .left-img img {
@@ -23,11 +50,15 @@
     height: 100%;
 }
 
-.clock-time {
+.container .right-text .clock-time {
     display: flex;
+    gap: 45px;
+    padding-left: 10px;
 }
 
-
+.container .right-text .clock-time p {
+    text-transform: uppercase;
+}
 
 
 
