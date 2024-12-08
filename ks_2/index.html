@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Availability Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            margin-bottom: 2rem;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container input, .form-container select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .search-box, .dashboard {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medicine Availability Tracker</h1>
+    </header>
+    <div class="container">
+        <div class="form-container" id="signupForm">
+            <h2>Signup</h2>
+            <form onsubmit="handleSignup(event)">
+                <label for="accountType">Account Type:</label>
+                <select id="accountType" required>
+                    <option value="">Select</option>
+                    <option value="user">User</option>
+                    <option value="pharmacy">Pharmacy</option>
+                </select>
+                <div id="pharmacyDetails" style="display: none;">
+                    <label for="pharmacyName">Pharmacy Name:</label>
+                    <input type="text" id="pharmacyName">
+                    <label for="pharmacyAddress">Pharmacy Address:</label>
+                    <input type="text" id="pharmacyAddress">
+                </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Signup</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div class="form-container" id="loginForm" style="display: none;">
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+        </div>
+
+        <div class="dashboard" id="userDashboard">
+            <h2>User Dashboard</h2>
+            <div class="search-box">
+                <input type="text" id="medicineInput" placeholder="Search for a medicine...">
+                <button onclick="searchMedicine()">Search</button>
+            </div>
+            <ul class="pharmacy-list" id="pharmacyList">
+                <!-- Pharmacy results will be displayed here -->
+            </ul>
+            <button onclick="editProfile()">Edit Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="dashboard" id="pharmacyDashboard">
+            <h2>Pharmacy Dashboard</h2>
+            <form onsubmit="addMedicine(event)">
+                <label for="medicineName">Medicine Name:</label>
+                <input type="text" id="medicineName" required>
+                <label for="medicineAmount">Amount:</label>
+                <input type="number" id="medicineAmount" required>
+                <button type="submit">Add Medicine</button>
+            </form>
+            <ul id="medicineList">
+                <!-- Medicines will be displayed here -->
+            </ul>
+            <button onclick="editProfile()">Edit Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        let userType = null;
+
+        function showSignup() {
+            document.getElementById('signupForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none';
+        }
+
+        function showLogin() {
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        }
+
+        document.getElementById('accountType').addEventListener('change', function() {
+            const details = document.getElementById('pharmacyDetails');
+            details.style.display = this.value === 'pharmacy' ? 'block' : 'none';
+        });
+
+        function handleSignup(event) {
+            event.preventDefault();
+            const accountType = document.getElementById('accountType').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (accountType === 'pharmacy') {
+                const pharmacyName = document.getElementById('pharmacyName').value;
+                const pharmacyAddress = document.getElementById('pharmacyAddress').value;
+                localStorage.setItem('user', JSON.stringify({ accountType, email, password, pharmacyName, pharmacyAddress }));
+            } else {
+                localStorage.setItem('user', JSON.stringify({ accountType, email, password }));
+            }
+            alert('Signup successful!');
+            showLogin();
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    if (user && user.email === email && user.password === password) {
+        userType = user.accountType;
+        if (userType === 'pharmacy') {
+            document.getElementById('pharmacyDashboard').style.display = 'block';
+        } else {
+            const userDashboard = document.getElementById('userDashboard');
+            userDashboard.style.display = 'block';
+            userDashboard.querySelector('.search-box').style.display = 'block';
+        }
+        document.getElementById('loginForm').style.display = 'none';
+    } else {
+        alert('Invalid credentials');
+    }
+        }
+
+        function logout() {
+            userType = null;
+            document.getElementById('userDashboard').style.display = 'none';
+            document.getElementById('pharmacyDashboard').style.display = 'none';
+            showLogin();
+        }
+
+        function addMedicine(event) {
+            event.preventDefault();
+            const name = document.getElementById('medicineName').value;
+            const amount = document.getElementById('medicineAmount').value;
+            const list = document.getElementById('medicineList');
+            const item = document.createElement('li');
+            item.textContent = `${name} - ${amount}`;
+            list.appendChild(item);
+        }
+
+        function editProfile() {
+            alert('Edit profile feature coming soon!');
+        }
+
+        function searchMedicine() {
+            const input = document.getElementById('medicineInput').value.toLowerCase();
+            const list = document.getElementById('pharmacyList');
+            list.innerHTML = '';
+
+            const pharmacies = [
+                {
+                    name: "Green Cross Pharmacy",
+                    address: "123 Main Street",
+                    contact: "(123) 456-7890",
+                    medicines: ["Paracetamol", "Aspirin", "Ibuprofen"]
+                },
+                {
+                    name: "Health Plus Pharmacy",
+                    address: "456 Elm Street",
+                    contact: "(987) 654-3210",
+                    medicines: ["Vitamin C", "Antibiotics", "Cough Syrup"]
+                },
+                {
+                    name: "CareWell Pharmacy",
+                    address: "789 Oak Avenue",
+                    contact: "(555) 123-4567",
+                    medicines: ["Insulin", "Paracetamol", "Pain Relief Gel"]
+                }
+            ];
+
+            const results = pharmacies.filter(pharmacy =>
+                pharmacy.medicines.some(medicine => medicine.toLowerCase().includes(input))
+            );
+
+            if (results.length > 0) {
+                results.forEach(pharmacy => {
+                    const item = document.createElement('li');
+                    item.className = 'pharmacy-item';
+                    item.innerHTML = `
+                        <h3>${pharmacy.name}</h3>
+                        <p><strong>Address:</strong> ${pharmacy.address}</p>
+                        <p><strong>Contact:</strong> ${pharmacy.contact}</p>
+                        <p><strong>Available Medicines:</strong> ${pharmacy.medicines.join(', ')}</p>
+                    `;
+                    list.appendChild(item);
+                });
+            } else {
+                list.innerHTML = '<p>No pharmacies found with the requested medicine.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
