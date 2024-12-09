@@ -6,20 +6,20 @@ function searchMedicine() {
     const pharmacies = [
         {
             name: "Green Cross Pharmacy",
-            address: "123 Main Street",
-            contact: "(123) 456-7890",
+            address: "Rumuibekwe Estate Axis",
+            contact: "(+234) 456-7890",
             medicines: ["Paracetamol", "Aspirin", "Ibuprofen"]
         },
         {
             name: "Health Plus Pharmacy",
-            address: "456 Elm Street",
-            contact: "(987) 654-3210",
+            address: "456 Elm Street, Eleme",
+            contact: "(+234) 654-3210",
             medicines: ["Vitamin C", "Antibiotics", "Cough Syrup"]
         },
         {
             name: "CareWell Pharmacy",
-            address: "789 Oak Avenue",
-            contact: "(555) 123-4567",
+            address: "789 Oak Avenue, Agip",
+            contact: "(+234) 123-4567",
             medicines: ["Insulin", "Paracetamol", "Pain Relief Gel"]
         }
     ];
