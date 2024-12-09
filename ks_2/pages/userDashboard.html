@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+</head>
+<body>
+    <header>
+        <h1>Medicine Availability Tracker</h1>
+    </header>
+    <div class="container">
+        <div class="dashboard" id="userDashboard">
+            <h2>User Dashboard</h2>
+            <div class="search-box">
+                <input type="text" id="medicineInput" placeholder="Search for a medicine...">
+                <button onclick="searchMedicine()">Search</button>
+            </div>
+            <ul class="pharmacy-list" id="pharmacyList">
+                <!-- Pharmacy results will be displayed here -->
+            </ul>
+            <!-- <button onclick="editProfile()">Edit Profile</button> -->
+            <!-- <button onclick="logout()">Logout</button> -->
+        </div>
+    </div>
+
+    <script src="../scripts/userDashboard.js"></script>
+</body>
+</html>

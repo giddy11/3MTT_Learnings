@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+</head>
+<body>
+    <header>
+        <h1>Medicine Availability Tracker</h1>
+    </header>
+    <div class="container">
+        <div class="dashboard" id="pharmacyDashboard">
+            <h2>Pharmacy Dashboard</h2>
+            <form onsubmit="addMedicine(event)">
+                <label for="medicineName">Medicine Name:</label>
+                <input type="text" id="medicineName" required>
+                <label for="medicineAmount">Amount:</label>
+                <input type="number" id="medicineAmount" required>
+                <button type="submit">Add Medicine</button>
+            </form>
+            <ul id="medicineList">
+                <!-- Medicines will be displayed here -->
+            </ul>
+            <!-- <button onclick="editProfile()">Edit Profile</button> -->
+            <!-- <button onclick="logout()">Logout</button> -->
+        </div>
+    </div>
+
+    <script src="../scripts/pharmacyDashboard.js"></script>
+</body>
+</html>
